@@ -1,0 +1,3 @@
+Implementación de una cola con dos pilas. Crear una clase Cola2Pilas que
+implemente una cola utilizando dos pilas. La cola debe ser capaz de realizar las operaciones
+enqueue y dequeue.
