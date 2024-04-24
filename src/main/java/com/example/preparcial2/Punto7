@@ -1,0 +1,8 @@
+
+Convertir las siguientes expresiones a notación prefija y postfija y evaluar la expresión b.
+
+(A + B) * C - (D - E) * (F + G)
+
+4*(5+6-(8/2^3)-7)-1
+
+R/
