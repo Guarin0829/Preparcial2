@@ -1,47 +1,38 @@
 package com.example.preparcial2.DiapositivasTaller.Punto1;
 
-//OJO PENDIENTE
-public class Main {
-    public static boolean esPalindromo(String cadena) {
-        // Eliminamos los espacios en blanco y convertimos la cadena a minúsculas
-        cadena = cadena.replaceAll("\\s", "").toLowerCase();
+import com.example.preparcial2.DiapositivasTaller.Cola;
+import com.example.preparcial2.DiapositivasTaller.Pila;
 
-        // Creamos una pila para almacenar los caracteres de la cadena
+public class Main {
+    public static void main(String[] args) {
+        String palabra = "anitalavalatina";
+
+        if (esPalindromo(palabra)) {
+            System.out.println("La palabra '" + palabra + "' es un palíndromo.");
+        } else {
+            System.out.println("La palabra '" + palabra + "' no es un palíndromo.");
+        }
+    }
+
+    public static boolean esPalindromo(String palabra) {
+        Cola<Character> cola = new Cola<>();
         Pila<Character> pila = new Pila<>();
 
-        // Agregamos cada carácter de la cadena a la pila
-        for (int i = 0; i < cadena.length(); i++) {
-            char caracter = cadena.charAt(i);
-            pila.push(caracter);
+        // Agregar cada carácter de la palabra a la cola y a la pila
+        for (int i = 0; i < palabra.length(); i++) {
+            cola.encolar(palabra.charAt(i));
+            pila.push(palabra.charAt(i));
         }
 
-        // Creamos una nueva cadena que contenga los caracteres desapilados de la pila
-        StringBuilder cadenaInvertida = new StringBuilder();
-        while (!pila.estaVacia()) {
-            cadenaInvertida.append(pila.pop());
+        // Comparar cada carácter de la cola con el de la pila
+        while (!cola.estaVacia()) {
+            if (!cola.desencolar().equals(pila.pop())) {
+                return false;
+            }
         }
 
-        // Comparamos la cadena original con la cadena invertida
-        String cadenaOriginal = cadena;
-        String cadenaInvertidaStr = cadenaInvertida.toString();
-        boolean esPalindromo = cadenaOriginal.equals(cadenaInvertidaStr);
-
-        // Mostramos los detalles de la verificación
-        System.out.println("Cadena original: " + cadenaOriginal);
-        System.out.println("Cadena invertida: " + cadenaInvertidaStr);
-        System.out.println("Es un palíndromo: " + esPalindromo);
-
-        return esPalindromo;
-    }
-
-    public static void main(String[] args) {
-        String cadena1 = "anita lava la tina";
-        String cadena2 = "oso";
-        String cadena3 = "java";
-
-        System.out.println("¿La cadena \"" + cadena1 + "\" es un palíndromo?: " + esPalindromo(cadena1));
-        System.out.println("¿La cadena \"" + cadena2 + "\" es un palíndromo?: " + esPalindromo(cadena2));
-        System.out.println("¿La cadena \"" + cadena3 + "\" es un palíndromo?: " + esPalindromo(cadena3));
+        return true;
     }
 }
+
 

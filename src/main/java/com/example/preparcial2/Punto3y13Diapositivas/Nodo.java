@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto2;
+package com.example.preparcial2.Punto3y13Diapositivas;
 
 public class Nodo<T> {
 
@@ -39,5 +39,6 @@ public class Nodo<T> {
         this.valorNodo = valorNodo;
     }
 }
+
 
 

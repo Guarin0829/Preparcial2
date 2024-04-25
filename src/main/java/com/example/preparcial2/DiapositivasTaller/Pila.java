@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto2;
+package com.example.preparcial2.DiapositivasTaller;
 
 public class Pila<T> {
 
@@ -22,7 +22,7 @@ public class Pila<T> {
     public T pop() {
 
         if(estaVacia()) {
-            throw new RuntimeException("La Pila est� vac�a");
+            throw new RuntimeException("La Pila est vaca");
         }
 
         T dato = cima.getValorNodo();
@@ -103,3 +103,7 @@ public class Pila<T> {
     }
 
 }
+
+
+
+

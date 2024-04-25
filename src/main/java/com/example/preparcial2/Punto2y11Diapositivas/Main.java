@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto2;
+package com.example.preparcial2.Punto2y11Diapositivas;
 
 public class Main {
 

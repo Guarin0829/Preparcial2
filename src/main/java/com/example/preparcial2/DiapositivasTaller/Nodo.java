@@ -1,4 +1,4 @@
-package com.example.preparcial2.DiapositivasTaller.Punto1;
+package com.example.preparcial2.DiapositivasTaller;
 
 public class Nodo<T> {
 

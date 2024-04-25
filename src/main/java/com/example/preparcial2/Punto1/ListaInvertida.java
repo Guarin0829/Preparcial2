@@ -11,7 +11,7 @@ public class ListaInvertida {
         listaNumeros.imprimirLista();
 
         // Invertir la lista utilizando el método invertirConPilas()
-        ListaSimple<Integer> listaInvertida = listaNumeros.invertirConPilas();
+        ListaSimple<Integer> listaInvertida = listaNumeros.invertirConPilas(listaNumeros);
 
         // Imprimir la lista invertida
         System.out.println("Lista invertida:");

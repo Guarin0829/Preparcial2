@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto3;
+package com.example.preparcial2.Punto2y11Diapositivas;
 
 public class Cola<T> {
 
@@ -101,5 +101,3 @@ public class Cola<T> {
     }
 
 }
-
-

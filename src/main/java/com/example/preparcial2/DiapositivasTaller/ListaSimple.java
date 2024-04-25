@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto1;
+package com.example.preparcial2.DiapositivasTaller;
 
 import java.util.Iterator;
 
@@ -71,7 +71,7 @@ public class ListaSimple<T> implements Iterable<T> {
             return valor;
         }
 
-        throw new RuntimeException("Lista vac�a");
+        throw new RuntimeException("Lista vaca");
     }
 
     @Override
@@ -132,10 +132,10 @@ public class ListaSimple<T> implements Iterable<T> {
         this.tamanio = tamanio;
     }
 
-    public ListaSimple<T> invertirConPilas(ListaSimple<T> lista) {
+    public ListaSimple<T> invertirConPilas() {
         Pila<T> pila = new Pila<>();
 
-        for (T elemento : lista) {
+        for (T elemento : this) {
             pila.push(elemento);
         }
 
@@ -152,3 +152,4 @@ public class ListaSimple<T> implements Iterable<T> {
 
 
 }
+

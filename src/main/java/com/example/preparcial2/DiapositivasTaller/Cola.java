@@ -1,4 +1,4 @@
-package com.example.preparcial2.Punto2;
+package com.example.preparcial2.DiapositivasTaller;
 
 public class Cola<T> {
 
@@ -87,7 +87,7 @@ public class Cola<T> {
     }
 
     @Override
-    protected Cola<T> clone() {
+    public Cola<T> clone() {
 
         Cola<T> nueva = new Cola<>();
         Nodo<T> aux = nodoPrimero;
